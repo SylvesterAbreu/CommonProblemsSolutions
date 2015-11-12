@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import stringUtils.SylvesterStringUtils;
+import stringUtils.StringUtils;
 
 public class StringUtilsTest {
 
@@ -16,8 +16,8 @@ public class StringUtilsTest {
     public void thatStringPotatoesIsReversed() throws Exception {
         final String original = "potatoes";
         
-        final SylvesterStringUtils sylvesterStringUtils = new SylvesterStringUtils();
-        final String stringReversed = sylvesterStringUtils.reverse(original);
+        final StringUtils stringUtils = new StringUtils();
+        final String stringReversed = stringUtils.reverse(original);
         
         assertThat("seotatop", is(equalTo(stringReversed)));
     }
@@ -26,8 +26,8 @@ public class StringUtilsTest {
     public void thatAllWhiteSpacesAreRemovedFromString() throws Exception {
         final String original = "All White Spaces Are Removed From String";
         
-        final SylvesterStringUtils sylvesterStringUtils = new SylvesterStringUtils();
-        final String noWhiteSpaces = sylvesterStringUtils.removeWhiteSpaces(original);
+        final StringUtils stringUtils = new StringUtils();
+        final String noWhiteSpaces = stringUtils.removeWhiteSpaces(original);
         
         assertThat("AllWhiteSpacesAreRemovedFromString", is(equalTo(noWhiteSpaces)));
     }
@@ -35,16 +35,16 @@ public class StringUtilsTest {
     @Test
     public void thatStringContainsDuplicatedCharacters() throws Exception {
         final String original = "cabage";
-        final SylvesterStringUtils sylvesterStringUtils = new SylvesterStringUtils();
+        final StringUtils stringUtils = new StringUtils();
         
-        assertTrue(sylvesterStringUtils.hasDuplicates(original));
+        assertTrue(stringUtils.hasDuplicates(original));
     }
     
     @Test
     public void thatStringDoenstContainDuplicatedCharacters() throws Exception {
         final String train = "train";
-        final SylvesterStringUtils sylvesterStringUtils = new SylvesterStringUtils();
+        final StringUtils stringUtils = new StringUtils();
         
-        assertFalse(sylvesterStringUtils.hasDuplicates(train));
+        assertFalse(stringUtils.hasDuplicates(train));
     }
 }

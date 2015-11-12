@@ -1,6 +1,6 @@
 package stringUtils;
 
-public class SylvesterStringUtils {
+public class StringUtils {
 
     public String reverse(String original) {
         final StringBuilder reverser = new StringBuilder(original);
