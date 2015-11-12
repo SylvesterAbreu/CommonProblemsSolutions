@@ -1,3 +1,5 @@
+package sylvester;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertFalse;
@@ -8,7 +10,7 @@ import org.junit.Test;
 
 import stringUtils.SylvesterStringUtils;
 
-public class SylvesterStringUtilsTest {
+public class StringUtilsTest {
 
     @Test
     public void thatStringPotatoesIsReversed() throws Exception {
