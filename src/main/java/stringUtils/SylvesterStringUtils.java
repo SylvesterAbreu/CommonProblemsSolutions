@@ -1,8 +1,5 @@
 package stringUtils;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class SylvesterStringUtils {
 
     public String reverse(String original) {
@@ -16,17 +13,6 @@ public class SylvesterStringUtils {
     }
 
     public boolean hasDuplicates(String original) {
-        if (original == null) {
-            return false;
-        }
-        final List<Character> characters = new LinkedList<>();
-        for (int i = 0; i < original.length(); i++ ) {
-            final char currentCharacter = original.charAt(i);
-            if (characters.contains(currentCharacter)) {
-                return true;
-            }
-            characters.add(currentCharacter);
-        }
-        return false;
+        return new LookForDuplicates(original).hasDuplicates();
     }
 }
