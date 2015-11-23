@@ -1,5 +1,6 @@
 package sylvester;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Optional;
@@ -17,5 +18,13 @@ public class OptionalsTest {
         final Optional<Car> car = Optional.ofNullable(person).map(Person::getCar);
 
         assertTrue(car.isPresent());
+    }
+
+    @Test
+    public void thatCarIsNotPresent() throws Exception {
+        final Person person = new Person(null);
+        final Optional<Car> car = Optional.ofNullable(person).map(Person::getCar);
+
+        assertFalse(car.isPresent());
     }
 }
