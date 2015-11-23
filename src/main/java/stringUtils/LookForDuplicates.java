@@ -11,9 +11,7 @@ class LookForDuplicates {
     }
 
     public boolean hasDuplicates() {
-        return original == null 
-                ? false 
-                : haveDuplicates(original);
+        return original != null && haveDuplicates(original);
     }
 
     private boolean haveDuplicates(String original) {
